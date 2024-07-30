@@ -1,0 +1,8 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+.custom-file-upload .p-button {
+    background-color: #dd262f; /* Change this to your desired color */
+    border-color: #e76161; /* Change this to your desired color */
+    color: rgb(238, 33, 33); /* Change this to your desired text color */
+  }

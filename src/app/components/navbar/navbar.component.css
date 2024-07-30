@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .left-margin{
+    margin-left: 20px;
+}  
+.right-margin{
+    margin-right: 20px;
+}
+.no-underline-link {
+  text-decoration: none;
+  color: white;
+}
+.mt{
+  margin-top: 10px;
+}
+.containerb {
+ text-align: center;
+}

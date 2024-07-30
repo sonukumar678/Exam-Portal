@@ -1,0 +1,50 @@
+<h1 style="margin-left: 10px;margin-top: 20px;">Questions of {{qTitle}}</h1>
+
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container text-center">
+                <button mat-raised-button color="accent" [routerLink]="'/admin/add-question/'+qId+'/'+qTitle">Add Question</button>
+                <button mat-raised-button color="accent" class="ml" [routerLink]="'/admin/upload-pdf-questions/'+qId+'/'+qTitle">Upload Pdf Question</button>
+            </div>
+            @for (q of questions; let i =$index; track q;) {
+            <mat-card class="ml">
+               
+                    <mat-card-content>
+                        <p>
+                            <b>Q {{i+1}}</b>
+                            <span class="ml" [innerHTML]="q.content"></span>
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>A.</b><span class="ml">{{q.option1}}</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><b>B.</b><span class="ml">{{q.option2}}</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>C.</b><span class="ml">{{q.option3}}</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><b>D.</b><span class="ml">{{q.option4}}</span></p>
+                                </div>
+                            </div>
+                            <p><b>Answer.</b><span class="ml">{{q.answer}}</span></p>
+                            
+                        </div>
+                       
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button color="primary">Update</button>
+                        <button mat-button color="warn" (click)="deleteQuestion(q.qid)">Delete</button>
+                    </mat-card-actions>
+                    <mat-divider></mat-divider>
+                
+            </mat-card>
+            }<br>
+        </div>
+    </div>
+</div>

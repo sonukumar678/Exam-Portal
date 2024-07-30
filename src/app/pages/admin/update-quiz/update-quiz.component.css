@@ -1,0 +1,18 @@
+.full-width{
+    width: 100%;
+}
+.ml{
+    margin-left: 20px;
+}
+.mt{
+    margin-top: 20px;
+}
+.mb{
+    margin-bottom: 20px;
+}
+.mr{
+    margin-right: 20px;
+}
+.example-margin{
+    margin-top: 40px;
+}

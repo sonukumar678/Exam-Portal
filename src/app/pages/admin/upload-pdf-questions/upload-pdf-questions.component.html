@@ -1,0 +1,80 @@
+<div class="bootstrap-wrapper">
+    <div class="row mt">
+        <div class="col-md-12">
+            <h1>Upload file</h1>
+            <div class="container text-center">
+                
+            <!--    <div class="text-center"> 
+                    <input class="form-control" type="file" id="fileField"
+                            (change)="onChange($event)"> 
+                  
+                    <button (click)="onUpload()"  
+                        class="btn btn-success"> 
+                        Upload 
+                    </button> 
+                </div> 
+                  
+               
+                <div class="container text-center jumbotron"
+                    > 
+                    <h2> Visit Here</h2> 
+                    <a href="{{shortLink}}">{{shortLink}}</a> 
+                </div> 
+                  
+                
+                <div class="container"> 
+                    <h3>Loading ...</h3> 
+                </div> -->
+            <!--    <mat-card>
+                    <h3>Only Pdf allowed</h3>
+                    <input type="file" class="file-input text-center" (change)="onChange($event)" #fileUpload />
+
+                    <div *ngIf="file">
+                        <section class="file-info">
+                          File details:
+                          <ul>
+                            <li>Name: {{file.name}}</li>
+                            <li>Type: {{file.type}}</li>
+                            <li>Size: {{file.size}} bytes</li>
+                          </ul>
+                        </section>
+                      
+                        <button (click)="onUpload()">Upload the file</button>
+                        
+                        <section [ngSwitch]="status">
+                          <p *ngSwitchCase="'uploading'">⏳ Uploading...</p>
+                          <p *ngSwitchCase="'success'">✅ Done!</p>
+                          <p *ngSwitchCase="'fail'">❌ Error!</p>
+                          <p *ngSwitchDefault>😶 Waiting to upload...</p>
+                        </section>
+                      </div>
+                </mat-card> -->
+               <mat-card>
+                
+                <p-fileUpload 
+                 name="demo[]" 
+                 url="https://www.primefaces.org/cdn/api/upload.php" 
+                 (onUpload)="onUpload($event)" 
+                 [multiple]="true" 
+                 accept="application/pdf*" 
+                 maxFileSize="1000000"
+                 class="p-button-success"
+                 >
+                <ng-template pTemplate="content">
+                    <ul *ngIf="uploadedFiles.length">
+                        @for(f of uploadedFiles; track f){
+                        <li>
+                            {{ f.name }} - {{ f.size }} ✅ Done!
+                        </li>
+                    }
+                    </ul>
+        </ng-template>
+</p-fileUpload>
+<div>
+    <p-toast />
+</div>
+               </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

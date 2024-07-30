@@ -1,0 +1,25 @@
+.example-header-image {
+    background-image: url("../../../../assets/quiz.png");
+    background-size: cover;
+  }
+  .ml{
+    margin-left: 20px;
+}
+.mt{
+    margin-top: 20px;
+}
+.b {
+    height: 40px;
+  }
+
+  mat-card {
+    margin: 10px 0;
+  }
+  
+  mat-paginator {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  

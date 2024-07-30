@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item [routerLink]="'/user-dashboard/0'">
+            <mat-icon mat-list-icon class="mt">quiz</mat-icon>&nbsp;All Quizzes</button>
+            @for (q of catgories; let i =$index; track q;) {
+        <button mat-list-item [routerLink]="'/user-dashboard/'+q.cid">
+            <mat-icon mat-list-icon class="mt">quiz</mat-icon>&nbsp;{{q.title}}</button>
+       
+            }
+    </mat-action-list>
+</mat-card>

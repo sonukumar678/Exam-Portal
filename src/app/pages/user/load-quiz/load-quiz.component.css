@@ -1,0 +1,24 @@
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.example-header-image{
+    background-image: url("../../../../assets/quiz1.png");
+    background-size: cover;
+}
+
+.ml{
+    margin-left: 20px;
+}
+.mt{
+    margin-top: 20px;
+}
+.mb{
+    margin-bottom: 20px;
+}
+.mr{
+    margin-right: 20px;
+}

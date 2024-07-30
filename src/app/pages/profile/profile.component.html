@@ -1,0 +1,65 @@
+<mat-card >
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+    <h1 style="margin-left: 20px;margin-top: 20px;">Admin Profile Details</h1>
+
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+            </div>
+            <div class="container text-center">
+                <img src="https://th.bing.com/th/id/OIP.mmjVD2F3Bcidm7tmMFalpQHaHa?rs=1&pid=ImgDetMain" alt="" 
+                     class="profile-img">
+                  <h1>{{user.firstName}} {{user.lastName}}</h1>   
+            </div>
+            
+            <div class="container">
+                
+                <table class="table table-bordered text-center">
+                
+                    <tbody style="font-size: medium;">
+                        <tr>
+                            <td>Username</td>
+                            <td>{{user.username}}</td>
+                            
+                          </tr>
+                      <tr>
+                        <td>UserId</td>
+                        <td>{{user.id}}</td>
+                        
+                      </tr>
+                      
+                      <tr>
+                        <td>Email</td>
+                        <td>{{user.email}}</td>
+                      </tr>
+                      <tr>
+                        <td>Last Name</td>
+                        <td>{{user.lastName}}</td>
+                      </tr>
+                      <tr>
+                        <td>Role</td>
+                        <td>{{user.authorities[0].authority}}</td>
+                      </tr>
+                      <tr>
+                        <td>Status</td>
+                        <td>Active</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  
+                  
+                  
+            </div>
+        </div>
+        <div class="container text-center">
+            <button type="submit" mat-fab extended color="primary">Update</button>
+            <button style="margin-left: 20px;" mat-fab extended color="accent">Share</button>
+          </div>
+    </mat-card-content>
+</mat-card>
